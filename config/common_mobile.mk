@@ -92,5 +92,6 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     LineageBlackTheme \
+    RoundQSOverlay \
     ThemePicker \
     ThemesStub
