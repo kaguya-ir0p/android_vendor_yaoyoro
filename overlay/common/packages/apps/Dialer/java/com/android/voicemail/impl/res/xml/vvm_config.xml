@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-
 <list name="carrier_config_list">
     <pbundle_as_map>
         <string-array name="mccmnc">
@@ -277,6 +262,13 @@
     </pbundle_as_map>
     <pbundle_as_map>
         <string-array name="mccmnc">
+            <item value="302220?gid1=4D4F" />
+            <item value="302221?gid1=4D4F" />
+        </string-array>
+        <string name="vvm_type_string">vvm_type_disabled</string>
+    </pbundle_as_map>
+    <pbundle_as_map>
+        <string-array name="mccmnc">
             <item value="20809?gid1=6332" />
             <item value="20809?gid1=6336" />
             <item value="20809?gid1=7330" />
@@ -386,11 +378,11 @@
         <string-array name="carrier_vvm_package_name_string_array">
             <item value="com.att.mobile.android.vvm" />
         </string-array>
-        <string name="vvm_type_string">vvm_type_advvm</string>
+        <string name="vvm_type_string">vvm_type_omtp</string>
         <boolean name="vvm_legacy_mode_enabled_bool" value="true" />
         <boolean name="vvm_ignore_transcription" value="true" />
         <boolean name="vvm_transcription_always_allowed" value="true" />
-        <boolean name="vvm_use_direct_tls_connection" value="true" />
+        <boolean name="vvm_use_direct_tls_connection_bool" value="true" />
         <boolean name="vvm_change_greeting_enabled_bool" value="true" />
         <boolean name="vvm_greeting_update_bool" value="false" />
     </pbundle_as_map>
@@ -407,7 +399,7 @@
         <boolean name="vvm_legacy_mode_enabled_bool" value="true" />
         <boolean name="vvm_ignore_transcription" value="true" />
         <boolean name="vvm_transcription_always_allowed" value="true" />
-        <boolean name="vvm_use_direct_tls_connection" value="true" />
+        <boolean name="vvm_use_direct_tls_connection_bool" value="true" />
         <boolean name="vvm_change_greeting_enabled_bool" value="true" />
         <boolean name="vvm_greeting_update_bool" value="false" />
     </pbundle_as_map>
