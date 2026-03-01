@@ -8,8 +8,7 @@ endif
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.lineage.version=$(LINEAGE_VERSION) \
     ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(LINEAGE_VERSION) \
-    ro.lineagelegal.url=https://lineageos.org/legal
+    ro.modversion=$(LINEAGE_VERSION)
 
 # LineageOS Platform Display Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
