@@ -8,7 +8,3 @@ endif
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.lineage.version=$(LINEAGE_VERSION) \
     ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)
-
-# LineageOS Platform Display Version
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION)
