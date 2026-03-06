@@ -28,13 +28,13 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	    IMAGEWIDTH=$(TARGET_SCREEN_WIDTH); \
 	fi; \
 	IMAGESCALEWIDTH=$$IMAGEWIDTH; \
-	IMAGESCALEHEIGHT=$$(expr $$IMAGESCALEWIDTH / 3); \
+	IMAGESCALEHEIGHT=$$(expr $$IMAGESCALEWIDTH / 2); \
 	if [ "$(TARGET_BOOTANIMATION_HALF_RES)" = "true" ]; then \
 	    IMAGEWIDTH="$$(expr "$$IMAGEWIDTH" / 2)"; \
 	fi; \
-	IMAGEHEIGHT=$$(expr $$IMAGEWIDTH / 3); \
+	IMAGEHEIGHT=$$(expr $$IMAGEWIDTH / 2); \
 	RESOLUTION="$$IMAGEWIDTH"x"$$IMAGEHEIGHT"; \
-	prebuilts/tools-lineage/${HOST_OS}-x86/bin/mogrify -resize $$RESOLUTION -colors 256 $(INTERMEDIATES)/*/*.png; \
+	prebuilts/tools-lineage/${HOST_OS}-x86/bin/mogrify -resize $$RESOLUTION -colors 256 -background black -gravity center -extent $$RESOLUTION $(INTERMEDIATES)/*/*.png; \
 	echo "$$IMAGESCALEWIDTH $$IMAGESCALEHEIGHT 60" > $(INTERMEDIATES)/desc.txt; \
 	cat vendor/lineage/bootanimation/desc.txt >> $(INTERMEDIATES)/desc.txt
 	$(hide) $(SOONG_ZIP) -L 0 -o $@ -C $(INTERMEDIATES) -D $(INTERMEDIATES)
