@@ -206,9 +206,11 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/procmem
 endif
 
+ifneq ($(TARGET_EXCLUDE_ADB_ROOT),true)
 # Root
 PRODUCT_PACKAGES += \
     adb_root
+endif
 ifneq ($(TARGET_BUILD_VARIANT),user)
 ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
