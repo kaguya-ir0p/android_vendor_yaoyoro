@@ -148,6 +148,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.egl.blobcache.multifile=true \
     ro.egl.blobcache.multifile_limit=33554432
 
+ifneq ($(TARGET_EXCLUDE_LOS_EXTRA_CLI_UTILS),true)
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     bash \
@@ -162,6 +163,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
     system/bin/getcap \
     system/bin/setcap
+endif
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
@@ -176,6 +178,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/%/libfuse-lite.so \
     system/%/libntfs-3g.so
 
+ifneq ($(TARGET_EXCLUDE_LOS_EXTRA_CLI_UTILS),true)
 # Openssh
 PRODUCT_PACKAGES += \
     scp \
@@ -192,6 +195,7 @@ PRODUCT_COPY_FILES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+endif
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
